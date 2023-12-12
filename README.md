@@ -1,6 +1,6 @@
-# Exisiting repository checker
+# RepoVisibility TransitionAlert
 
-Have you ever wanted to receive notifications when a repository, pre-revealed like in an arXiv paper, transitions from private or commit-less status to being public? This repository's code sends a LINE notification the moment a commit is made, especially for 404 not found or empty repositories.
+Have you ever wanted to receive notifications when a repository, pre-revealed like in an arXiv paper, transitions from private or commit-less status to being public? This repository's code sends notification using a notification api like LINE notification the moment a commit is made, especially for 404 not found or empty repositories.
 
 
 ## Installation
@@ -10,7 +10,7 @@ git clone https://github.com/Popinpon/RepoCheckNotify.git
 pip install python-dotenv
 # or (conda user) conda install -c conda-forge python-dotenv 
 ```
-you need cron or scheduler like Task scheduler(Win) to run this script periodically.
+
 
 ## Preparation
 - Get message api token
@@ -23,7 +23,7 @@ you need cron or scheduler like Task scheduler(Win) to run this script periodica
     ...
     ```
 
-- If you want to use other notification service, you can modify the code in send_notififcation.py
+- If you want to use other notification service like Discord, you can modify [send_message function](https://github.com/Popinpon/RepoCheckNotify/blob/main/send_notification.py?plain=1#L26) in send_notififcation.py
 
 ## Usage
 ```bash
