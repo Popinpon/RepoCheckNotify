@@ -12,25 +12,27 @@ pip install python-dotenv
 ```
 you need cron or scheduler like Task scheduler(Win) to run this script periodically.
 
-## Usage
+## Preparation
 - Get message api token
      This code uses LINE notify api [here](https://notify-bot.line.me)
 - Save the token in .env file as followed:
+
+    ```bash
+    https://github.com/<username1>/<repo_name1>
+    https://github.com/<username2>/<repo_name2>
+    ...
+    ```
+
 - If you want to use other notification service, you can modify the code in send_notififcation.py
 
-```bash
-https://github.com/<username1>/<repo_name1>
-https://github.com/<username2>/<repo_name2>
-...
-```
-
+## Usage
 ```bash
 
-check_repo.py <repo_config_file(default repo_list.txt)>
-
+check_repo.py <repository list file (default repo_list.txt)>
+# if you want to execute theis script periodically, use cron or Task scheduler
 ```
+Careful: github api has rate limit.
 
-The config file as followed:
 
 
 
