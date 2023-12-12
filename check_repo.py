@@ -3,9 +3,8 @@ import time
 import argparse
 from urllib.parse import urlparse
 import time
-import os
 
-from dotenv import load_dotenv
+from send_notification import notify_changing
 
 
 def init_args():
@@ -44,22 +43,7 @@ def check_repository_status(repo_url):
         raise Exception("Invalid repository url: {}".format(repo_url))
 
 
-def send_line_notify(notification_message):
-    """
-    notifies a message by line 
-    """
 
-
-    load_dotenv(verbose=True)
-
-    dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-    load_dotenv(dotenv_path)
-
-    line_token = os.environ.get("TOKEN")
-    line_notify_api = 'https://notify-api.line.me/api/notify'
-    headers = {'Authorization': f'Bearer {line_token}'}
-    data = {'message': f'message: {notification_message}'}
-    requests.post(line_notify_api, headers = headers, data = data)
 
 def main():
     # read url config
@@ -72,7 +56,7 @@ def main():
             continue
         existing_url = check_repository_status(url)
         if existing_url is not None :
-            send_line_notify(existing_url)
+            notify_changing(existing_url)
             print(existing_url)
             # send notification
             # break
