@@ -34,7 +34,7 @@ pip install python-dotenv
 ## Usage
 ```bash
 
-check_repo.py <repository list file (default repo_list.txt)>
+python check_repo.py <repository list file (default repo_list.txt)>
 # if you want to execute theis script periodically, use cron or Task scheduler
 ```
 Careful: github api has rate limit.
