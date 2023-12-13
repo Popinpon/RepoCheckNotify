@@ -1,6 +1,10 @@
-# Repo Visibility Transition Alert
+# RepoVTA - Repo Visibility Transition Alert
+Repo VTA is a python script that sends notification when a github repository visibility becomes public.
 
 Have you ever wanted to receive notifications when a repository, pre-revealed like in an arXiv paper, transitions from private or commit-less status to being public? This repository's code sends notification using a notification api like LINE notification the moment a commit is made, especially for 404 not found or empty repositories.
+
+![](404img.png)
+
 
 
 ## Installation
