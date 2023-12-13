@@ -23,7 +23,7 @@ pip install python-dotenv
     ```
 - Save repository urls in repo_list.txt file as followed:
     ```bash
-    #.repo_list.txt
+    #repo_list.txt
     https://github.com/<username1>/<repo_name1>
     https://github.com/<username2>/<repo_name2>
     ...
